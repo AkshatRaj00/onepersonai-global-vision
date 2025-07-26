@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 'use client';
 
 import React from "react";
@@ -14,9 +13,14 @@ const Header = () => {
     try {
       await signOut(auth);
       alert('Logged out successfully!');
-    } catch (error: any) { // 'any' type for simplicity in CodeSandbox
-      console.error('Logout failed:', error);
-      alert('Logout failed: ' + error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error('Logout failed:', error);
+        alert('Logout failed: ' + error.message);
+      } else {
+        console.error('Logout failed:', error);
+        alert('Logout failed: Unknown error');
+      }
     }
   };
 

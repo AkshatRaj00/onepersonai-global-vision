@@ -104,11 +104,13 @@ export default function HomePage() {
 
       {/* Login and Register Modals */}
       <LoginModal 
+        key="login-modal" // Key add kiya hai
         isOpen={isLoginModalOpen} 
         onClose={() => setIsLoginModalOpen(false)} 
         onRegisterClick={() => { setIsLoginModalOpen(false); setIsRegisterModalOpen(true); }}
       />
       <RegisterModal 
+        key="register-modal" // Key add kiya hai
         isOpen={isRegisterModalOpen} 
         onClose={() => setIsRegisterModalOpen(false)} 
         onLoginClick={() => { setIsRegisterModalOpen(false); setIsLoginModalOpen(true); }}
