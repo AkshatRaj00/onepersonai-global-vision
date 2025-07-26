@@ -1,9 +1,10 @@
 /* src/app/globals.css */
 
 /* Tailwind CSS directives - YE BAHUT ZAROORI HAIN! */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Remove Tailwind directives if not using Tailwind CSS */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 
 /* Custom Animations - Ye tumhare animations hain */
 @keyframes fadeIn {
